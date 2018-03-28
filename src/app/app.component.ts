@@ -9,16 +9,11 @@ import { Recipe } from './models/recipe.model';
 })
 export class AppComponent {
 
-  rootList: Recipe[] = [
-    new Recipe('PB&J', 'Eat!', ['Peanutbutter', 'jelly', 'bread'], 2),
-    new Recipe('Spaghetti', 'Take me to Italy', ['sauce', 'meatballs', 'pasta'], 3),
-    new Recipe('Pizza', 'Bake with love', ['dough', 'sauce', 'cheese'], 1)
-  ];
+  rootList: Recipe[] = [];
 
   addRecipe(newRecipe: Recipe){
     this.rootList.push(newRecipe);
   }
-
 
   selectedRecipe = null;
 

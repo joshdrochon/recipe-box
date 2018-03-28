@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { Recipe } from '../models.recipe.model';
+import { Recipe } from '../models/recipe.model';
 
 @Component({
   selector: 'app-new-recipe',
@@ -7,9 +7,9 @@ import { Recipe } from '../models.recipe.model';
   styleUrls: ['./new-recipe.component.css']
 })
 export class NewRecipeComponent {
-  @Output sendRecipe = new EventEmitter();
+  @Output() sendRecipe = new EventEmitter();
 
-  submitForm(name: string, description: string, ingredients: string[], difficulty: number){
+  submitForm(name: string, description: string, ingredients: string[], difficulty: string){
     let newRecipe: Recipe = new Recipe(name, description, ingredients, parseInt(difficulty));
     this.sendRecipe.emit(newRecipe);
   }
