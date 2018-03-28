@@ -5,8 +5,13 @@ import { Recipe } from '../models/recipe.model';
   templateUrl: './edit-recipe.component.html',
   styleUrls: ['./edit-recipe.component.css']
 })
-export class EditRecipeComponent implements OnInit {
+export class EditRecipeComponent {
   @Input() childSelectedRecipe: Recipe;
+  @Output() clickedDone = new EventEmitter();
+
+  finishEditing(){
+    this.clickedDone.emit();
+  }
 
   constructor() { }
 
