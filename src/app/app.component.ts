@@ -15,8 +15,15 @@ export class AppComponent {
     new Recipe('Pizza', 'Bake with love', ['dough', 'sauce', 'cheese'], 1)
   ];
 
+  addRecipe(newRecipe: Recipe){
+    this.rootList.push(newRecipe);
+  }
+
+
   selectedRecipe = null;
 
+  /*this method only displays the form, the actual edit
+  method resides in EditRecipeComponent */
   editRecipe(recipe){
     this.selectedRecipe = recipe;
   }

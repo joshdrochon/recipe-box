@@ -7,3 +7,4 @@
 <h2>Here's a list of all the recipes: </h2>
 <app-recipe-list [childRecipeList]="rootList" (clickSender)="editRecipe($event)"></app-recipe-list>
 <app-edit-recipe [childSelectedRecipe]="selectedRecipe" (clickedDone)="finishEditing()"></app-edit-recipe>
+<app-new-recipe (sendRecipe)="addRecipe($event)"></app-new-recipe>

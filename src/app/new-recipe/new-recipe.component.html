@@ -1,3 +1,18 @@
-<p>
-  new-recipe works!
-</p>
+<h1>Create a new Recipe</h1>
+<div>
+  <label for="name">Name of recipe:</label>
+  <input #newName>
+  <label for="description">A short description: </label>
+  <input #newDescription>
+  <label for="ingredients">What ingredients:</label>
+  <input #newIngredients>
+</div>
+<div>
+  <label>Recipe Difficulty</label>
+  <select #newDifficulty>
+    <option [value]="1">Easy</option>
+    <option [value]="2">Medium</option>
+    <option [value]="3">Hard</option>
+  </select>
+  <button (click)="submitForm(newName.value, newDescription.value, newIngredients.value, newPriority.value)">Add</button>
+</div>
