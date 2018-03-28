@@ -6,13 +6,15 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
+import { EditRecipeComponent } from './edit-recipe/edit-recipe.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    RecipeListComponent
+    RecipeListComponent,
+    EditRecipeComponent
   ],
   imports: [
     BrowserModule,

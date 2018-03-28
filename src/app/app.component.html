@@ -6,17 +6,4 @@
 
 <h2>Here's a list of all the recipes: </h2>
 <app-recipe-list [childRecipeList]="rootList" (clickSender)="editRecipe($event)"></app-recipe-list>
-
-<div *ngIf="selectedRecipe">
-  <h3>{{selectedRecipe.description}}</h3>
-  <p>Recipe used: {{selectedRecipe.used}}</p>
-  <h3>Edit Recipe</h3>
-  <label>Enter a description of this recipe:</label>
-  <input [(ngModel)]="selectedRecipe.description">
-  <label>How difficulty is this recipe?</label>
-  <hr>
-  <input type="radio" [(ngModel)]="selectedRecipe.difficulty" [value]="1">1 (easy)
-  <input type="radio" [(ngModel)]="selectedRecipe.difficulty" [value]="2">2 (medium)
-  <input type="radio" [(ngModel)]="selectedRecipe.difficulty" [value]="3">3 (hard)
-  <button (click)="finishEditing()">Save changes</button>
-</div>
+<app-edit-recipe [childSelectedRecipe]="selectedRecipe"></app-edit-recipe>

@@ -1,0 +1,13 @@
+<div *ngIf="childSelectedRecipe">
+  <h3>{{childSelectedRecipe.description}}</h3>
+  <p>Recipe used: {{childSelectedRecipe.used}}</p>
+  <h3>Edit Recipe</h3>
+  <label>Enter a description of this recipe:</label>
+  <input [(ngModel)]="childSelectedRecipe.description">
+  <label>How difficulty is this recipe?</label>
+  <hr>
+  <input type="radio" [(ngModel)]="childSelectedRecipe.difficulty" [value]="1">1 (easy)
+  <input type="radio" [(ngModel)]="childSelectedRecipe.difficulty" [value]="2">2 (medium)
+  <input type="radio" [(ngModel)]="childSelectedRecipe.difficulty" [value]="3">3 (hard)
+  <button (click)="finishEditing()">Save changes</button>
+</div>

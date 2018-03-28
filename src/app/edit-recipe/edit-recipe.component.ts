@@ -1,0 +1,16 @@
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Recipe } from '../models/recipe.model';
+@Component({
+  selector: 'app-edit-recipe',
+  templateUrl: './edit-recipe.component.html',
+  styleUrls: ['./edit-recipe.component.css']
+})
+export class EditRecipeComponent implements OnInit {
+  @Input() childSelectedRecipe: Recipe;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
