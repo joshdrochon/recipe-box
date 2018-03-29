@@ -26,10 +26,9 @@ export class AppComponent {
     this.selectedRecipe = null;
   }
 
-  ninja = {
-    name: "Hayabusa",
-    belt: "black"
-  };
+  topRecipe: Recipe = new Recipe(
+    "Frozen PB&J", "Just try it!", ['peanutbutter', 'jelly', 'bread'], 1
+  );
 
 
 }

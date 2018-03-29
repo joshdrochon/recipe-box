@@ -4,8 +4,8 @@ import { Component, Input } from '@angular/core';
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
-export class HeaderComponent implements OnInit {
-  @Input() ninja;
+export class HeaderComponent {
+  @Input() topRecipe;
   header: string = 'Welcome to Simple Recipe!';
 }
 
