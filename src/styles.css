@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  border: 5px solid black;
+}
+
+#header{
+  text-align: center;
+}
+
+app-header{
+  font-family: cursive;
+}
+
+#recipes-container{
+  text-align: center;
+}
+
+li{
+  list-style-type: none;
+}
+
+*{
+  border: 1px solid red;
+}
+
+body{
+  background-color: blue;
+}

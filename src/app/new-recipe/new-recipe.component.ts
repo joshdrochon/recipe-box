@@ -3,8 +3,7 @@ import { Recipe } from '../models/recipe.model';
 
 @Component({
   selector: 'app-new-recipe',
-  templateUrl: './new-recipe.component.html',
-  styleUrls: ['./new-recipe.component.css']
+  templateUrl: './new-recipe.component.html'
 })
 export class NewRecipeComponent {
   @Output() sendRecipe = new EventEmitter();
@@ -13,9 +12,4 @@ export class NewRecipeComponent {
     let newRecipe: Recipe = new Recipe(name, description, ingredients, parseInt(difficulty));
     this.sendRecipe.emit(newRecipe);
   }
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

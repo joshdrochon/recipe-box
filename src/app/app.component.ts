@@ -4,8 +4,7 @@ import { Recipe } from './models/recipe.model';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
 
@@ -26,4 +25,11 @@ export class AppComponent {
   finishEditing(){
     this.selectedRecipe = null;
   }
+
+  ninja = {
+    name: "Hayabusa",
+    belt: "black"
+  };
+
+
 }

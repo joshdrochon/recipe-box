@@ -1,10 +1,19 @@
-<app-home>Loading...</app-home>
-<h1>Welcome, {{username}}!</h1>
-<form>
-  <input [(ngModel)]="username" type="text" name="user">
-</form>
+<div id="header">
+  <app-header [ninja]="ninja"></app-header>
+</div>
+<div class="container">
+  <h1>Welcome, {{username}}!</h1>
+  <form>
+    <label for="name">What's your name?</label>
+    <input [(ngModel)]="username" type="text" name="user">
+  </form>
 
-<h2>Here's a list of all the recipes: </h2>
-<app-recipe-list [childRecipeList]="rootList" (clickSender)="editRecipe($event)"></app-recipe-list>
-<app-edit-recipe [childSelectedRecipe]="selectedRecipe" (clickedDone)="finishEditing()"></app-edit-recipe>
-<app-new-recipe (sendRecipe)="addRecipe($event)"></app-new-recipe>
+
+  <app-edit-recipe [childSelectedRecipe]="selectedRecipe" (clickedDone)="finishEditing()"></app-edit-recipe>
+  <app-new-recipe (sendRecipe)="addRecipe($event)"></app-new-recipe>
+</div>
+<hr>
+<div id="recipes-container">
+    <h2>All Recipies: </h2>
+    <app-recipe-list [childRecipeList]="rootList" (clickSender)="editRecipe($event)"></app-recipe-list>
+</div>
