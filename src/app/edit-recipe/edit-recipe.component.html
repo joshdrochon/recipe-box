@@ -1,13 +1,13 @@
 <div *ngIf="childSelectedRecipe">
   <h3>{{childSelectedRecipe.description}}</h3>
   <p>Recipe used: {{childSelectedRecipe.used}}</p>
-  <h3><strong>You are editing {{childSelectedRecipe.name}}.</strong></h3>
+  <h4>You are editing {{childSelectedRecipe.name}}.</h4>
   <label>New description: </label>
   <input [(ngModel)]="childSelectedRecipe.description">
   <label>Difficulty: </label>
-  <input type="radio" [(ngModel)]="childSelectedRecipe.difficulty" [value]="1">1 (easy)
-  <input type="radio" [(ngModel)]="childSelectedRecipe.difficulty" [value]="2">2 (medium)
-  <input type="radio" [(ngModel)]="childSelectedRecipe.difficulty" [value]="3">3 (hard)
+  <input type="radio" [(ngModel)]="childSelectedRecipe.difficulty" [value]="1"> (easy)
+  <input type="radio" [(ngModel)]="childSelectedRecipe.difficulty" [value]="2"> (medium)
+  <input type="radio" [(ngModel)]="childSelectedRecipe.difficulty" [value]="3"> (hard)
   <button class="btn btn-success" (click)="finishEditing()">Save Changes</button>
   <hr class="bold-hr">
 </div>

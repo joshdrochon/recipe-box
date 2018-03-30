@@ -7,12 +7,32 @@
   box-shadow: 2px 2px 8px 5px #464646;
 }
 
+#bullet{
+  display: inline;
+  color: rgba(0,0,0,0);
+  border-radius: 100%;
+}
+
 #sidebar{
   border: 3px solid gray;
   background-color: #C09F8D;
   margin: 40px 40px 0px 60px;
   padding-top: 15px;
   box-shadow: 2px 2px 8px 5px #464646;
+}
+
+#sidebar ul{
+  padding-left: 0px;
+}
+
+#button{
+  margin-left: 10px;
+}
+
+#button:hover{
+  color: white;
+  cursor: pointer;
+  margin-left: 20px;
 }
 
 

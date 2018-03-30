@@ -1,4 +1,4 @@
 <ul>
-  <li [class]="difficultyColor(element)" *ngFor="let element of childRecipeList">
-  {{element.name}}<button (click)="editButtonClicked(element)"> edit/details</button></li>
+  <li *ngFor="let element of childRecipeList"><p id="bullet" [class]="difficultyColor(element)">---</p>
+  {{element.name}}<span id="button" (click)="editButtonClicked(element)"> edit</span></li>
 </ul>
